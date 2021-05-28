@@ -1,0 +1,42 @@
+{
+  "name": "whatson-indonesia",
+  "version": "1.0.0",
+  "description": "website for startup named WhatsOnIndonesia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "dev": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliefdany/whatson-indonesia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aliefdany/whatson-indonesia/issues"
+  },
+  "homepage": "https://github.com/aliefdany/whatson-indonesia#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-react": "^7.13.13",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "parcel": "*",
+    "prettier": "^2.3.0"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions"
+  ]
+}
