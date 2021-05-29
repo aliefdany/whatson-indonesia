@@ -125,15 +125,23 @@ table {
 
 /* END OF RESET -- END OF RESET -- END OF RESET -- END OF RESET */
 
+/* UTILITY */
+button {
+  width: 4em;
+  border: none;
+  border-radius: 100px;
+  font-size: 1em;
+}
+
 body {
   background-color: #141414;
   color: white;
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .navbar {
   display: flex;
-  font-family: "Ramabhadra", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1em;
   justify-content: space-between;
   align-items: center;
@@ -161,14 +169,118 @@ body {
 }
 
 .navbar .main-menu .language-switch button {
-  width: 4em;
-  border: none;
-  border-radius: 100px;
-  font-size: 1em;
-}
-
-.navbar .main-menu .language-switch button {
-  margin-right: 0.5em;
   color: #ffffff;
   cursor: pointer;
+}
+
+.navbar .main-menu .language-switch .idn {
+  margin-right: 0.5em;
+}
+.navbar .main-menu .language-switch .en {
+  margin-left: 0.5em;
+}
+
+/* END OF NAVBAR -- END OF NAVBAR -- END OF NAVBAR  */
+
+.home {
+  height: 90vh;
+  background: url("./images/Home.jpg") no-repeat;
+  background-position: center 80%;
+  background-size: cover;
+}
+
+.home-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 0 2vw 0 2vw;
+  position: fixed;
+  top: 10vh;
+  height: 90vh;
+  width: 100vw;
+  background: linear-gradient(
+    90.08deg,
+    rgba(0, 0, 0, 0.7) 6.86%,
+    rgba(0, 0, 0, 0.51) 35.69%,
+    rgba(0, 0, 0, 0.3) 66.26%,
+    rgba(0, 0, 0, 0.2) 87.88%
+  );
+  mix-blend-mode: normal;
+  z-index: 2;
+}
+
+/* .home-overlay {
+  border: 1px solid white;
+} */
+
+.active {
+  color: #ececec;
+}
+
+.home-overlay .breadcrumbs {
+  height: 70vh;
+  width: 2vw;
+}
+
+.home-overlay .breadcrumbs ul {
+  color: #878787;
+  display: flex;
+  height: inherit;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.2em;
+}
+
+.home-overlay .breadcrumbs ul li {
+  /* border: 1px white solid; */
+  transform: rotate(-90deg);
+}
+
+/* For Aligning Companion */
+/* .home-overlay div {
+  border: 1px solid white;
+} */
+
+.home-overlay .welcome-text {
+  width: 30vw;
+  margin-left: 5.08vw;
+}
+
+.home-overlay .welcome-text h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 3em;
+  margin-bottom: 0.3em;
+}
+
+.home-overlay .welcome-text h3 {
+  font-size: 0.8em;
+  margin-left: 0.15em;
+}
+
+.home-overlay .welcome-text p {
+  margin-bottom: 1em;
+  line-height: 1.15;
+  margin-left: 0.15em;
+}
+
+.home-overlay button {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: red;
+  color: #ffffff;
+  height: 1.5em;
+  width: 7.5em;
+  margin-left: 0.08em;
+  padding-bottom: 1.5em;
+  cursor: pointer;
+}
+
+.home-overlay button:hover {
+  background-color: rgb(201, 0, 0);
+}
+
+.welcome-logo {
+  margin-left: 51.8vh;
 }
