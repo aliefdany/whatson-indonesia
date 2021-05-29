@@ -1,7 +1,8 @@
 import { render } from "react-dom";
+import Navbar from "./Navbar";
 
 const App = () => {
-  return <h1>Hello World</h1>;
+  return <Navbar />;
 };
 
 render(<App />, document.getElementById("root"));
