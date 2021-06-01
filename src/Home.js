@@ -27,9 +27,7 @@ const Home = () => {
           </p>
           <button>Selengkapnya</button>
         </div>
-        <div className="welcome-logo">
-          <img src={Logo} alt="company-logo"></img>
-        </div>
+        <img src={Logo} alt="company-logo" className="welcome-logo"></img>
       </div>
     </Fragment>
   );

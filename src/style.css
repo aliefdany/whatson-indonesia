@@ -154,18 +154,39 @@ body {
 .navbar .main-menu {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex: 3 1 auto;
+  border: 1px solid white;
+}
+
+.logo {
+  flex: 0 1 auto;
 }
 
 .navbar .main-menu ul {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 1 auto;
 }
 
 .navbar .main-menu ul li {
   margin: 0 1em 0 1em;
+  text-align: center;
+  flex: 0 1 auto;
+  border: 1px solid white;
+}
+
+.navbar .main-menu ul li:first-child {
+  margin-left: 0;
 }
 
 .navbar .main-menu .language-switch {
   margin-left: 1em;
+  flex: 0 1 auto;
+  border: 1px solid white;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .navbar .main-menu .language-switch button {
@@ -192,13 +213,12 @@ body {
 .home-overlay {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
 
   padding: 0 2vw 0 2vw;
   position: fixed;
   top: 10vh;
   height: 90vh;
-  width: 100vw;
   background: linear-gradient(
     90.08deg,
     rgba(0, 0, 0, 0.7) 6.86%,
@@ -210,10 +230,6 @@ body {
   z-index: 2;
 }
 
-/* .home-overlay {
-  border: 1px solid white;
-} */
-
 .active {
   color: #ececec;
 }
@@ -221,6 +237,7 @@ body {
 .home-overlay .breadcrumbs {
   height: 70vh;
   width: 2vw;
+  flex: 0 1 auto;
 }
 
 .home-overlay .breadcrumbs ul {
@@ -245,8 +262,8 @@ body {
 } */
 
 .home-overlay .welcome-text {
-  width: 30vw;
-  margin-left: 5.08vw;
+  margin-left: 5.08%;
+  flex: 1 1 30vw;
 }
 
 .home-overlay .welcome-text h1 {
@@ -282,5 +299,51 @@ body {
 }
 
 .welcome-logo {
-  margin-left: 51.8vh;
+  flex: 1 1 auto;
+  max-width: 25vw;
+  height: auto;
+  margin-left: 21.8%;
+  border: white 1px solid;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 480px) and (max-width: 640px) {
+  /* CSS */
+  .navbar {
+    flex-direction: column;
+  }
+
+  .home-overlay {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .home-overlay .breadcrumbs ul {
+    flex-direction: row;
+  }
+
+  .home-overlay .breadcrumbs ul li {
+    border: 1px white solid;
+    transform: rotate(0);
+  }
+
+  .home-overlay .breadcrumbs {
+    width: 70%;
+    height: 2vh;
+    margin: 0;
+    flex: 0 1 auto;
+  }
+
+  .home-overlay .welcome-text {
+    margin: 0;
+    flex: 0 1 auto;
+  }
+
+  .home-overlay .welcome-logo {
+    min-width: 40vw;
+    margin: 0;
+    flex: 0 1 auto;
+    order: -1;
+  }
 }
