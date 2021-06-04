@@ -5,15 +5,13 @@ const Home = () => {
   return (
     <Fragment>
       <div className="home"></div>
+      <ul className="breadcrumbs">
+        <li className="active">Home</li>
+        <li>Kebudayaan</li>
+        <li>Kuliner</li>
+        <li>Wisata</li>
+      </ul>
       <div className="home-overlay">
-        <div className="breadcrumbs">
-          <ul>
-            <li className="active">Home</li>
-            <li>Kebudayaan</li>
-            <li>Kuliner</li>
-            <li>Wisata</li>
-          </ul>
-        </div>
         <div className="welcome-text">
           <h3>Halaman Utama | ID</h3>
           <h1>Kenali Indonesia Lebih Jauh</h1>
@@ -29,6 +27,7 @@ const Home = () => {
         </div>
         <img src={Logo} alt="company-logo" className="welcome-logo"></img>
       </div>
+      <div className="page-2">hai</div>
     </Fragment>
   );
 };

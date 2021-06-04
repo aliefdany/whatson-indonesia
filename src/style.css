@@ -122,16 +122,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 /* END OF RESET -- END OF RESET -- END OF RESET -- END OF RESET */
 
-/* UTILITY */
 button {
   width: 4em;
   border: none;
   border-radius: 100px;
   font-size: 1em;
 }
+/* UTILITY */
 
 body {
   background-color: #141414;
@@ -140,6 +139,10 @@ body {
 }
 
 .navbar {
+  position: fixed;
+  right: 0;
+  left: 0;
+
   display: flex;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1em;
@@ -149,18 +152,19 @@ body {
   height: 10vh;
   padding: 0 2vw 0 2vw;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  z-index: 4;
+}
+
+.navbar .logo {
+  flex: 0 1 auto;
 }
 
 .navbar .main-menu {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  flex: 3 1 auto;
-  border: 1px solid white;
-}
-
-.logo {
   flex: 0 1 auto;
+  /* border: 1px solid white; */
 }
 
 .navbar .main-menu ul {
@@ -174,7 +178,7 @@ body {
   margin: 0 1em 0 1em;
   text-align: center;
   flex: 0 1 auto;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 .navbar .main-menu ul li:first-child {
@@ -184,9 +188,9 @@ body {
 .navbar .main-menu .language-switch {
   margin-left: 1em;
   flex: 0 1 auto;
-  border: 1px solid white;
   display: flex;
   flex-wrap: nowrap;
+  /* border: 1px solid white; */
 }
 
 .navbar .main-menu .language-switch button {
@@ -200,14 +204,35 @@ body {
 .navbar .main-menu .language-switch .en {
   margin-left: 0.5em;
 }
-
 /* END OF NAVBAR -- END OF NAVBAR -- END OF NAVBAR  */
 
 .home {
+  position: relative;
+  top: 10vh;
   height: 90vh;
-  background: url("./images/Home.jpg") no-repeat;
-  background-position: center 80%;
-  background-size: cover;
+  background: url("./images/Home.jpg") no-repeat center 80% / cover;
+}
+
+.breadcrumbs {
+  position: fixed;
+  width: 1vw;
+  height: 70vh;
+  top: 20vh;
+  left: 2vw;
+  z-index: 3;
+  color: #878787;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.2em;
+  /* border: 1px solid white; */
+}
+
+.breadcrumbs li {
+  transform: rotate(-90deg);
+  /* border: 1px solid white; */
 }
 
 .home-overlay {
@@ -216,7 +241,7 @@ body {
   justify-content: space-between;
 
   padding: 0 2vw 0 2vw;
-  position: fixed;
+  position: absolute;
   top: 10vh;
   height: 90vh;
   background: linear-gradient(
@@ -228,32 +253,11 @@ body {
   );
   mix-blend-mode: normal;
   z-index: 2;
+  /* border: 1px white solid; */
 }
 
 .active {
   color: #ececec;
-}
-
-.home-overlay .breadcrumbs {
-  height: 70vh;
-  width: 2vw;
-  flex: 0 1 auto;
-}
-
-.home-overlay .breadcrumbs ul {
-  color: #878787;
-  display: flex;
-  height: inherit;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  font-size: 1.2em;
-}
-
-.home-overlay .breadcrumbs ul li {
-  /* border: 1px white solid; */
-  transform: rotate(-90deg);
 }
 
 /* For Aligning Companion */
@@ -262,8 +266,8 @@ body {
 } */
 
 .home-overlay .welcome-text {
-  margin-left: 5.08%;
-  flex: 1 1 30vw;
+  margin-left: 7.08vw;
+  flex: 0 1 30vw;
 }
 
 .home-overlay .welcome-text h1 {
@@ -298,12 +302,16 @@ body {
   background-color: rgb(201, 0, 0);
 }
 
-.welcome-logo {
+.home-overlay .welcome-logo {
   flex: 1 1 auto;
   max-width: 25vw;
   height: auto;
   margin-left: 21.8%;
-  border: white 1px solid;
+  /* border: white 1px solid; */
+}
+
+.page-2 {
+  height: 100vh;
 }
 
 /* MEDIA QUERIES */
@@ -319,20 +327,18 @@ body {
     justify-content: space-evenly;
   }
 
-  .home-overlay .breadcrumbs ul {
+  .breadcrumbs {
     flex-direction: row;
-  }
 
-  .home-overlay .breadcrumbs ul li {
-    border: 1px white solid;
-    transform: rotate(0);
-  }
-
-  .home-overlay .breadcrumbs {
     width: 70%;
     height: 2vh;
-    margin: 0;
-    flex: 0 1 auto;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .breadcrumbs li {
+    border: 1px white solid;
+    transform: rotate(0);
   }
 
   .home-overlay .welcome-text {
@@ -341,7 +347,7 @@ body {
   }
 
   .home-overlay .welcome-logo {
-    min-width: 40vw;
+    min-width: 50vw;
     margin: 0;
     flex: 0 1 auto;
     order: -1;
