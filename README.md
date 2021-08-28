@@ -4,9 +4,7 @@ This is my own private project. Whatson Indonesia is some kind of a wikipedia-li
 <hr/>
 
 ### Demo💻
-currently is still work in progress :
-
-Some screenshot of its UI Design below👇
+The demo isn't available yet because it's still work in progress. But, you can briefly see some screenshots of its UI Design below👇
 
 Landing page :
 ![](https://raw.githubusercontent.com/aliefdany/whatson-indonesia/master/assets/image/WOID-LandingPage.png)
