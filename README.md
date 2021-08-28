@@ -8,6 +8,8 @@ currently is still work in progress :
 
 Some screenshot of its UI Design below👇
 
+Landing page :
+![](https://raw.githubusercontent.com/aliefdany/whatson-indonesia/master/assets/image/WOID-LandingPage.png)
 
 
 <hr/>
