@@ -11,6 +11,12 @@ Some screenshot of its UI Design below👇
 Landing page :
 ![](https://raw.githubusercontent.com/aliefdany/whatson-indonesia/master/assets/image/WOID-LandingPage.png)
 
+Main category page :
+![](https://raw.githubusercontent.com/aliefdany/whatson-indonesia/master/assets/image/WOID-Culture.png)
+
+Details page:
+![](https://raw.githubusercontent.com/aliefdany/whatson-indonesia/master/assets/image/WOID-Details.png)
+
 
 <hr/>
 
