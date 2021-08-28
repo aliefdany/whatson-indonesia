@@ -6,6 +6,9 @@ This is my own private project. Whatson Indonesia is some kind of a wikipedia-li
 ### Demo💻
 currently is still work in progress :
 
+Some screenshot of its UI Design below👇
+
+
 
 <hr/>
 
